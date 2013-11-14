@@ -1,0 +1,20 @@
+EXIFTimeEdit is a simple program to correct timestamps inside metadata contained in digital photos.
+
+It uses CCR Exif components (http://ccr-exif.googlecode.com/svn) and is based on TimeShift demo.
+
+Enchancements to TimeShift demo:
+    * Now you can adjust dates much more flexibly, i.e. shift the necessary date part (year/month/day/hour/minute/second) by a value or just set the date part to a value you input.
+    * Process large numbers of files without application hang.
+    * Processed files remain in the list with changed props, so you can continue adjusting
+    * Press Ctrl-A to select all items, Del to remove selected items
+    * Determine time shift tool: calculate time shift between selected file's EXIF timestamp and the timestamp you input.
+
+
+Possible use cases:
+    * Correct timestamps if your camera's clocks are late by several minutes
+    * Correct timestamps to the local time zone if you forgot to adjust your camera clocks in a trip
+    * Correct timestamps if you had your camera's clocks cleared to factory defaults (usually this means complete difference with current timestamp)
+    * Set last-modified property of a file to EXIF timestamp
+
+
+Please keep in mind leap years and the day of 29/02 when changing year/month date parts!
