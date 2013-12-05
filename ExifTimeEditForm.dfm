@@ -37,15 +37,15 @@ object frmExifTimeEdit: TfrmExifTimeEdit
         Width = 225
       end
       item
-        Caption = 'EXIF date/time'
+        Caption = 'EXIF DateTime'
         Width = 157
       end
       item
-        Caption = 'EXIF date/time original'
+        Caption = 'EXIF DateTimeOriginal'
         Width = 157
       end
       item
-        Caption = 'EXIF date/time digitised'
+        Caption = 'EXIF DateTimeDigitized'
         Width = 157
       end>
     ColumnClick = False
@@ -72,7 +72,7 @@ object frmExifTimeEdit: TfrmExifTimeEdit
       Width = 935
       Height = 33
       ButtonHeight = 30
-      ButtonWidth = 110
+      ButtonWidth = 127
       DisabledImages = imlDisabled
       Images = imlColor
       List = True
@@ -92,8 +92,17 @@ object frmExifTimeEdit: TfrmExifTimeEdit
         Action = actRemove
         AutoSize = True
       end
-      object sep1: TToolButton
+      object btnDetermineShift: TToolButton
         Left = 201
+        Top = 0
+        Caption = 'Determine shift'
+        ImageIndex = 4
+        ParentShowHint = False
+        ShowHint = True
+        OnClick = btnDetermineShiftClick
+      end
+      object sep1: TToolButton
+        Left = 328
         Top = 0
         Width = 8
         Caption = 'sep1'
@@ -101,7 +110,7 @@ object frmExifTimeEdit: TfrmExifTimeEdit
         Style = tbsSeparator
       end
       object btnProcess: TToolButton
-        Left = 209
+        Left = 336
         Top = 0
         Action = actProcess
         AutoSize = True
@@ -121,7 +130,7 @@ object frmExifTimeEdit: TfrmExifTimeEdit
         Width = 294
         Height = 114
         Caption = ' File date/time (last modified) '
-        ItemIndex = 1
+        ItemIndex = 0
         Items.Strings = (
           'Leave unchanged'
           'Set equal to EXIF "Date/time original" field'
@@ -135,8 +144,8 @@ object frmExifTimeEdit: TfrmExifTimeEdit
         Top = 24
         Width = 295
         Height = 81
-        Caption = ' EXIF date/time field '
-        ItemIndex = 1
+        Caption = ' EXIF DateTime field '
+        ItemIndex = 0
         Items.Strings = (
           'Leave unchanged'
           'Set equal to EXIF "Date/time original" field')
@@ -149,21 +158,13 @@ object frmExifTimeEdit: TfrmExifTimeEdit
         Top = 24
         Width = 309
         Height = 114
-        Caption = ' Date/time change options '
+        Caption = ' EXIF Original/Digitized fields shift options '
         ParentShowHint = False
         ShowHint = True
         TabOrder = 2
-        object btnDetermineShift: TSpeedButton
-          Left = 15
-          Top = 73
-          Width = 137
-          Height = 38
-          Caption = 'Determine shift...'
-          OnClick = btnDetermineShiftClick
-        end
         object cbDatePart: TComboBox
           Left = 15
-          Top = 30
+          Top = 54
           Width = 88
           Height = 25
           Style = csDropDownList
@@ -171,7 +172,7 @@ object frmExifTimeEdit: TfrmExifTimeEdit
         end
         object cbAction: TComboBox
           Left = 117
-          Top = 29
+          Top = 53
           Width = 48
           Height = 26
           Style = csDropDownList
@@ -185,7 +186,7 @@ object frmExifTimeEdit: TfrmExifTimeEdit
         end
         object eNumber: TEdit
           Left = 179
-          Top = 30
+          Top = 54
           Width = 102
           Height = 25
           TabOrder = 2
@@ -194,12 +195,22 @@ object frmExifTimeEdit: TfrmExifTimeEdit
         end
         object updNumber: TUpDown
           Left = 281
-          Top = 30
+          Top = 54
           Width = 20
           Height = 25
           Associate = eNumber
           Max = 2147483647
           TabOrder = 3
+        end
+        object chbLeave: TCheckBox
+          Left = 16
+          Top = 24
+          Width = 273
+          Height = 17
+          Caption = 'Leave unchanged'
+          State = cbGrayed
+          TabOrder = 4
+          OnClick = chbLeaveClick
         end
       end
     end
@@ -210,7 +221,7 @@ object frmExifTimeEdit: TfrmExifTimeEdit
     Left = 272
     Top = 256
     Bitmap = {
-      494C010104000C00240018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010104000C00280018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000003000000001002000000000000048
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -855,7 +866,7 @@ object frmExifTimeEdit: TfrmExifTimeEdit
     Left = 336
     Top = 256
     Bitmap = {
-      494C010104000C00240018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010104000C00280018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000003000000001002000000000000048
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
