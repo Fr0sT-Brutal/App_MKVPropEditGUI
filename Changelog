@@ -1,0 +1,5 @@
+23.01.2014
+
++ Added language list: load/save, select favorites; edit track languages via combo box
+! Added support of quotes in title/track names
++ On closing, check for unsaved modifications and query user for action

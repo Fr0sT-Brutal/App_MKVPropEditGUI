@@ -14,5 +14,14 @@ Usage
 
 Run the software, paste path to a MKV file and press [Load] or drop it from Explorer onto the application window. Do some changes then press [Save].
 
-![](./screen/screenshot.png?raw=true)
+Screenshots
+-----------
 
+Application in action.
+![](./screen/clipboard1.png?raw=true)
+
+Language select
+![](./screen/clipboard2.png?raw=true)
+
+Selecting favorite languages
+![](./screen/clipboard3.png?raw=true)
