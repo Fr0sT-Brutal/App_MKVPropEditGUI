@@ -1,3 +1,9 @@
+24.01.2014
+
+! Finished struggling with the damned language combobox
+! Autoresize track list on form resize
++ Added version info
+
 23.01.2014
 
 + Added language list: load/save, select favorites; edit track languages via combo box
