@@ -1,4 +1,15 @@
-24.01.2014
+28.01.2014 - v.1.1
++ Hints for track properties' columns and the whole track list
++ App caption, form caption and About text use app version and CPU architecture
+! Added URLs to About text
+! Fix: language select doesn't modify properties
+! File path edit widened
+! "Unsaved changes" MsgBox on close: buttons were messed
++ Remove string properties (Name, Lang) from file if they're empty
+! If track flags are not set, assign default value and mark the flag modified so it will be changed on save
+! Fix empty lang assignment
+
+24.01.2014 - v.1.0
 
 ! Finished struggling with the damned language combobox
 ! Autoresize track list on form resize
